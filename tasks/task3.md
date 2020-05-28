@@ -20,7 +20,23 @@ index.html 파일을 열고 게임을 직접 실행해 봅시다.
 
 ### 정답
 
-(여기에 버그를 유발한 커밋의 id와 어떻게 하면 버그를 수정할 수 있는지 적어주세요.)
+![task3](../resources/task3.jpg)
+
+버그를 유발한 커밋 id는 "25ede836903881848fea811df5b687b59d962da3" 이며
+아래 그림에서 보듯이 411행을 삭제하면서 총알이 끊임없이 발사되는 현상이 발생되었다.
+
+>git rebase --interactive 25ede836903881848fea811df5b687b59d962da3^  # 해당 커밋 포함 rebase
+
+![task3_2](../resources/task3_2.jpg)
+
+vim 에서 "pick"을 "edit"으로 변경한 후 저장하고 종료한다
+파일에서 해당 오류를 수정한 후,
+
+>git add game.js
+>git commit --amend
+
+> git rebase --continue  # 이전 커밋 복구
+
 
 ### 힌트
 
