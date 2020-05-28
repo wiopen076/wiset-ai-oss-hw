@@ -33,6 +33,7 @@ vim 에서 "pick"을 "edit"으로 변경한 후 저장하고 종료한다
 파일에서 해당 오류를 수정한 후,
 
 >git add game.js
+
 >git commit --amend
 
 > git rebase --continue  # 이전 커밋 복구
